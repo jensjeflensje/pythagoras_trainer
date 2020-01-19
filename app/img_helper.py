@@ -75,6 +75,7 @@ def create_triangle():
     lengths.sort()
     lengths = _scrambled(lengths)
     print(lengths)
+    print(longest)
 
     char_point_pairs[0]["length"] = lengths[0]
     char_point_pairs[1]["length"] = lengths[1]

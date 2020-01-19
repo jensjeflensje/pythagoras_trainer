@@ -8,15 +8,70 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Pythagoras Trainer</title>
+    <style>
+        .box {
+            margin: 3vh;
+            padding: 3vh;
+            background-color: white;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.5s;
+        }
+        .box:hover {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .box img {
+            max-width: 100%;
+        }
+
+        input {
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        input:focus, input:focus{
+            outline: none;
+        }
+    </style>
 </head>
 <body>
-<h1>Pythagoras Trainer</h1>
-<button onclick="get_img()">Nieuwe opdracht</button>
-<br>
-<img id="question_img" src="" alt-="">
-<br>
-<input type="number" id="answer">
-<button onclick="check_answer()">Check</button>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="box">
+                <h1>Pythagoras Trainer</h1>
+                <p>
+                    Hoi, dit is de Pythagoras Trainer. Met deze Trainer kan je jouw stelling van Pythagoras-skills trainen. Lees wel eerst de spelregels, anders gaat het fout.
+                </p>
+                <h3>Spelregels</h3>
+                    <ol>
+                        <li>Bereken altijd de zijde waar een <strong>?</strong> staat.</li>
+                        <li>Rond het getal af op een heel getal, anders zal de website hem niet goed rekenen.</li>
+                        <li>Druk op <i>Nieuwe opdracht</i> om te beginnen.</li>
+                        <li>Deel dit met anderen! 😊</li>
+                    </ol>
+                </div>
+            </div>
+        <div class="col-md-6">
+            <div class="box">
+                <a href="#" class="btn btn-primary" onclick="get_img()">Nieuwe opdracht</a>
+                <br>
+                <img id="question_img" src="" alt-="">
+                <br>
+                <div class="input-group mb-3">
+                   <input class="form-control" type="number" id="answer">
+                    <div class="input-group-append">
+                        <a href="#" class="btn btn-secondary" onclick="check_answer()">Check</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
