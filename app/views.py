@@ -13,7 +13,7 @@ def get_img(request):
     img, data, answer = img_helper.create_triangle()
     rand = str(random.randint(0, 10000))
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    img_path = base_dir + "\\static\\" + rand + ".png"
+    img_path = os.path.join(base_dir, "static/" + rand + ".png")
     print(img_path)
     img.save(img_path)
     print(answer)
