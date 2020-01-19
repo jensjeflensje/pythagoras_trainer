@@ -14,6 +14,7 @@ def get_img(request):
     rand = str(random.randint(0, 10000))
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     img_path = base_dir + "\\static\\" + rand + ".png"
+    print(img_path)
     img.save(img_path)
     print(answer)
     return JsonResponse({
